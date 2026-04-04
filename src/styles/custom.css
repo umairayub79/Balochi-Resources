@@ -1,0 +1,12 @@
+/* Custom styles for Balochi Resources */
+
+:root {
+  /* Enhance the primary brand colors if desired */
+  --sl-color-accent-high: #ffeb3b; 
+  --sl-color-accent: #fbc02d;
+}
+
+/* Base tweaks to typography and general layout */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}

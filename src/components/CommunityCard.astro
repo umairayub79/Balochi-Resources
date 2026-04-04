@@ -1,0 +1,96 @@
+---
+// src/components/CommunityCard.astro
+/**
+ * A custom Card for the "Community" category using a Lucide 'Users' icon.
+ * This mimics the built-in Starlight Card styling.
+ */
+interface Props {
+  title?: string;
+}
+
+const { title = "Community & Organizations" } = Astro.props;
+---
+
+<article class="card sl-flex custom-community-card">
+  <p class="title sl-flex">
+    <svg
+      aria-hidden="true"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon"
+    >
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M10.27 1.25a4 4 0 0 1 5.92 5.92" />
+    </svg>
+    <span set:html={title} />
+  </p>
+  <div class="body"><slot /></div>
+</article>
+
+<style>
+  /* Mimic Starlight's Card styling */
+  .card {
+    --sl-card-border: var(--sl-color-purple);
+    --sl-card-bg: var(--sl-color-purple-low);
+    border: 1px solid var(--sl-color-gray-5);
+    background-color: var(--sl-color-black);
+    padding: clamp(1rem, calc(0.125rem + 3vw), 2.5rem);
+    flex-direction: column;
+    gap: clamp(0.5rem, calc(0.125rem + 1vw), 1rem);
+    display: flex; /* sl-flex usually means display flex */
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: var(--sl-text-h4);
+    color: var(--sl-color-white);
+    line-height: var(--sl-line-height-headings);
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+  }
+
+  .icon {
+    /* Starlight cards use rotating rainbow borders by default, 
+       but we specify the purple one found in Card.astro line 24.
+    */
+    border: 1px solid var(--sl-card-border);
+    background-color: var(--sl-card-bg);
+    padding: 0.22em;
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+    width: 1.333em;
+    height: 1.333em;
+  }
+
+  /* nth-child styles to match color rotation in CardGrid */
+  :global(.card-grid) > .custom-community-card:nth-child(4n + 1) {
+    --sl-card-border: var(--sl-color-orange);
+    --sl-card-bg: var(--sl-color-orange-low);
+  }
+  :global(.card-grid) > .custom-community-card:nth-child(4n + 3) {
+    --sl-card-border: var(--sl-color-green);
+    --sl-card-bg: var(--sl-color-green-low);
+  }
+  :global(.card-grid) > .custom-community-card:nth-child(4n + 4) {
+    --sl-card-border: var(--sl-color-red);
+    --sl-card-bg: var(--sl-color-red-low);
+  }
+  :global(.card-grid) > .custom-community-card:nth-child(4n + 5) {
+    --sl-card-border: var(--sl-color-blue);
+    --sl-card-bg: var(--sl-color-blue-low);
+  }
+
+  .body {
+    margin: 0;
+    font-size: clamp(var(--sl-text-sm), calc(0.5rem + 1vw), var(--sl-text-body));
+  }
+</style>

@@ -19,3 +19,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# build scripts and raw data
+generate-docs.js
+resources.csv
+src/pages/admin.astro
+src/pages/api/admin.ts

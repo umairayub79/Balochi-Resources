@@ -1,12 +1,20 @@
-# Starlight Starter Kit: Basics
+# BalochiResources
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-pnpm create astro@latest -- --template starlight
-```
+**BalochiResources** is a free, open-source resource platform for Baloch, Balochi, and Balochistan — dictionaries, grammars, literature, academic papers, audio, tools & more. It is built with [Astro](https://astro.build) and the [Starlight](https://starlight.astro.build) documentation theme, deployed for free on GitHub Pages.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The goal: a single place where learners, linguists, researchers, and community members can find Balochi dictionaries, grammar books, academic papers, audio/video resources, tools, and more.
+
+## Tech stack
+
+| Layer       | Tool                                                               |
+| ----------- | ------------------------------------------------------------------ |
+| Framework   | [Astro](https://astro.build)                                       |
+| Theme       | [Starlight](https://starlight.astro.build)                         |
+| Content     | Markdown / MDX files in `src/content/docs/`                        |
+| Search      | [Pagefind](https://pagefind.app) (built in to Starlight)           |
+| Hosting     | GitHub Pages (free, static)                                        |
 
 ## 🚀 Project Structure
 
@@ -14,22 +22,17 @@ Inside of your Astro + Starlight project, you'll see the following folders and f
 
 ```
 .
-├── public/
+├── public/                     ← Static assets (favicons, etc.)
 ├── src/
-│   ├── assets/
+│   ├── assets/                 ← Images embedded in Markdown
 │   ├── content/
-│   │   └── docs/
+│   │   └── docs/               ← Generated markdown pages live here
 │   └── content.config.ts
-├── astro.config.mjs
+├── CLAUDE.md                   ← Project instructions for Claude/AI
+├── astro.config.mjs            ← Astro + Starlight configuration
 ├── package.json
 └── tsconfig.json
 ```
-
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -37,12 +40,14 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+
+## How to add or update a resource
+
+1. Add or edit a Markdown/MDX file in the `src/content/docs/` directory.
+2. Commit and push — GitHub Pages will rebuild automatically.
 
 ## 👀 Want to learn more?
 
