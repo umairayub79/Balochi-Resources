@@ -5,7 +5,7 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "https://umairayub79.github.io",
-  base: "/",
+  base: "/Balochi-Resources",
   integrations: [
     starlight({
       title: "Balochi Resources",
