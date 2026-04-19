@@ -3,9 +3,9 @@ title: About BalochiResources
 description: Why this project exists and how to contribute.
 ---
 
-BalochiResources is a free, open, community-maintained resource platform for the Balochi language.
+BalochiResources is a free, open, community-maintained resource platform for Baloch, Balochi, and Balochistan.
 
-Whether you're a learner, a linguist, a member of the diaspora, or simply curious — this site is your starting point.
+Whether you're a learner, a linguist, a researcher, a member of the diaspora, or simply curious — this site is your starting point.
 
 ## How to contribute
 
