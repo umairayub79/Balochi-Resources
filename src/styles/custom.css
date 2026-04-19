@@ -1,15 +1,9 @@
-/* Custom styles for Balochi Resources */
-:root[data-theme="light"] {
-  --sl-color-accent-low: #c7e2ff; /* subtle tint (hover backgrounds, etc.) */
-  --sl-color-accent: #0964cd; /* main accent — links, active items */
-  --sl-color-accent-high: #003a8c; /* high-contrast accent (text on light bg) */
-}
-
 :root {
   /* Enhance the primary brand colors if desired */
-  --sl-color-accent-high: #ffeb3b;
-  --sl-color-accent: #fbc02d;
+  --sl-color-accent-high: #0964cd;
+  --sl-color-accent: #0964cd;
 }
+
 
 /* Base tweaks to typography and general layout */
 body {
